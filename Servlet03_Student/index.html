@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Home</title>
+</head>
+<body>
+    <table border="1" align="center">
+     <tr>
+        <th colspan=2><<학생관리 메뉴>></th>
+     </tr>
+     <tr>
+       <td><button id="inputBtn" type ="button">입력하기</button></td>
+       <td><button id="selectBtn" type="button">출력하기</button></td>
+     </tr>
+    </table>
+    <script>
+       document.getElementById("inputBtn").onclick = function(){
+    	   location.href = "/toInput";
+       }
+       document.getElementById("selectBtn").onclick = function(){
+    	   location.href = "/list";
+       }
+    </script>
+</body>
+</html>
