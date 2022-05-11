@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>학생 등록</title>
+</head>
+<body>
+  <form action ="/insert" method="post">
+     <table border="1" align="center">
+        <tr>
+         <th>신규 정보 입력</th>
+        </tr>
+        <tr>
+         <td>
+           <input type="text" name="name" placeholder="이름을 입력하세요">
+         </td>
+        <tr>
+          <td>
+            <input type="text" name="korean" placeholder="국어점수를 입력하세요">
+          </td>
+        </tr>
+        <tr>
+          <td>
+             <input type="text" name="english" placeholder="영어점수를 입력하세요">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="text" name="math" placeholder="수학점수를 입력하세요">
+           </td>
+        </tr>
+        <tr>
+          <td>
+             <button type="submit">입력하기</button>
+              <button type="button" id="backBtn">뒤로가기</button>
+          </td>
+        </tr> 
+        </tr>    
+      </table>
+    </form>
+     <script>
+         document.getElementById("backBtn").onclick = function(){
+        	 location.href="/index.html";
+         }
+     </script>
+</body>
+</html>
