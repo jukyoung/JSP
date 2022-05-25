@@ -82,6 +82,20 @@
                 </div>
             </div>
             <div class="row">
+	            <div class="col-3 header-board">
+	            	<p>첨부파일</p>
+	            </div>
+	            <div class="col-3 header-board">
+            		<p><a href="/fileDownload.file?ori_name=${file.ori_name}&sys_name=${file.sys_name}">${file.ori_name}</a></p>
+            	</div>
+            	 <div class="col-6 header-board">
+	            	<img style="width:200px" src="/files/${file.sys_name}">
+	            	<%-- 경로에 / 라고 쓰면 어떤의미냐면 
+	            	실제 경로에서 D:\webapp_workspace01\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\MVC3_Board\files
+	            	에서 D:\webapp_workspace01\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\MVC3_Board\ 까지 라는 것을 뜻함 --%>
+	            </div>
+            </div>
+            <div class="row">
                 <div class="col-3 bod">
                     <p>내용</p>
                 </div>
@@ -325,7 +339,7 @@
 		}
 	}
 	$("#backBtn").on("click", function(){ // 뒤로가기 버튼을 눌렀을때
-		location.href = "/board.bo";
+		location.href = "/board.bo?curPage=1";
 	});
 	
 </script>
