@@ -79,6 +79,22 @@ a{
 				</table>
 			</div>
 		</div>
+		<nav>
+		  <ul class="pagination justify-content-center">
+		  <c:if test="${naviMap.needPrev eq true}">
+		    <li class="page-item"><a class="page-link" href="/board.bo?curPage=${naviMap.startNavi-1}">Previous</a></li>
+		    <%-- 현재 6페이지에 있는 상태에서 이전 버튼을 클릭했음 -> 5페이지로 이동 --%>
+		  </c:if> 
+		  <%-- var:변수 begin: 시작할 인덱스 값 end: 끝 값 step: 몇 씩 증가하면서 반복(인덱스를 늘릴건지)--%>
+		  <c:forEach var="pageNum" begin="${naviMap.startNavi}" end="${naviMap.endNavi}" step="1" >
+		      <li class="page-item"><a class="page-link" href="/board.bo?curPage=${pageNum}">${pageNum}</a></li>
+		  </c:forEach>
+
+		  <c:if test="${naviMap.needNext eq true}">
+		    <li class="page-item"><a class="page-link" href="/board.bo?curPage=${naviMap.endNavi+1}">Next</a></li>
+		  </c:if>
+		  </ul>
+		</nav>
 		<div class="row">
 			<div class="col btns">
 				<button type="button" id="homeBtn" class="btn btn-success">홈으로</button>
